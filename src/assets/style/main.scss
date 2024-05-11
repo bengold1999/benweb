@@ -1,0 +1,16 @@
+
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+@import 'setup/_variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+@import'setup/typography';
+
+// BASICS
+@import 'base/layout';
+@import 'base/base';
+
+/*SASS - cmp*/
+@import 'cmp/AppHeader.scss';
+@import 'cmp/HomePage.scss';

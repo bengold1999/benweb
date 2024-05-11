@@ -1,4 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import './assets/style/main.scss'
 
 import { HomePage } from './pages/HomePage.jsx'
 import { AppHeader } from './cmps/AppHeader.jsx'
