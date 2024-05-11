@@ -1,3 +1,7 @@
 export function AppHeader(){
-    return <h3>header</h3>
+    return <section>
+        <div>
+            <h4>Bg</h4>
+        </div>
+    </section>
 }
