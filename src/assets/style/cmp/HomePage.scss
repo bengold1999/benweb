@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // background: $ue-background;
+    // width: 100%;
+
 
     & .title-card-container{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: rgb(97, 115, 6);
+        color:$ue-text-primary ;
         width: 100%;
 
     & .title-card{

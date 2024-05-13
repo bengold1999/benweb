@@ -1,21 +1,26 @@
 // COLOR PALETTE
 
-$clr0: #fff;
-$clr1: #dbca2d;
-$clr2: #29e57e;
-$clr3: #00e9ff;
-$clr4: #00d4ff;
-$clr5: #ffa3ff;
-$clr6: #af70af;
-$clr7: #005bab;
-$clr8: #007bff;
-$clr9: #ff0000;
-$clr10: #991f1f;
-$clr11: #f7f7f7;
-$clr12: #555555;
-$clr13: #000000;
-$clr14: #f9f9f9;
-$clr15: #f88484;
+// Primary Colors
+$ue-blue: #1f2833;       // Dark blue, almost black
+$ue-light-blue: #66fcf1; // Bright cyan for highlights
+
+// Secondary Colors
+$ue-gray: #c5c6c7;       // Light gray
+$ue-dark-gray: #0b0c10;  // Almost black gray
+$ue-accent: #45a29e;     // Teal
+
+// Background Colors
+$ue-background: #1f2833; // Main background color, dark
+$ue-panel-bg: #0b0c10;   // Dark panels or sections
+
+// Text Colors
+$ue-text-primary: #c5c6c7; // Primary text color, light gray
+$ue-text-secondary: #66fcf1; // Secondary text color, bright cyan
+
+// Utility Colors
+$ue-border: #66fcf1; // Borders and lines in bright cyan
+$ue-link-hover: #45a29e; // Hover state for links, teal
+
 
 // LAYOUT
 $layoutPadding: 20px;
@@ -32,3 +37,50 @@ $padded-break-narrow: $break-narrow + $layoutPadding * 2;
 $padded-break-normal: $break-normal + $layoutPadding * 2;
 $padded-break-wide: $break-wide + $layoutPadding * 2;
 $padded-break-X-wide: $break-wide + $layoutPadding * 2;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$ue-blue: #1f2833;
+$ue-light-blue: #66fcf1;
+$ue-gray: #c5c6c7;
+$ue-dark-gray: #0b0c10;
+$ue-accent: #45a29e;
+
+$ue-start-color: #23395d; // Deep midnight blue
+$ue-middle-color: #1f2833; // Darker gray
+$ue-end-color: #446dcb; // Lighter smoky blue
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+$ue-background: linear-gradient(to left, $ue-start-color, $ue-middle-color, $ue-end-color);
+
+
+$ue-panel-bg: #0b0c10;
+$ue-text-primary: #c5c6c7;
+$ue-text-secondary: #66fcf1;
+$ue-border: #66fcf1;
+$ue-link-hover: #45a29e;
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+$line-height-base: 1.6;
+$line-height-heading: 1.4;
+$font-size-responsive: calc(#{$font-size-base} + 0.5vw);

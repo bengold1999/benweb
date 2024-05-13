@@ -1,0 +1,13 @@
+.appHeader {
+    display: flex;
+
+    // background:$ue-panel-bg;
+    & .card_logo {
+        background-color: $ue-dark-gray;
+        font-family: $font-secondary;
+        font-weight: bold;
+        padding: 0px 1em;
+        border-radius: 0px  0px 1em  0.1em ;
+        margin-left: 1em;
+    }
+}
