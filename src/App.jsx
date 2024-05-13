@@ -11,7 +11,7 @@ export function App() {
 
   return (
     <Router>
-      <section className='app-layout'>
+      <section className='app-layout main-layout'>
         <AppHeader></AppHeader>
         <Routes>
           <Route element={<HomePage />} path='/' />
