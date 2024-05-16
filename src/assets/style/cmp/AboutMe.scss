@@ -1,7 +1,25 @@
-.about-me{
-    background-color: $ue-panel-bg;
+.about-me {
+    padding: 2em;
+    background: $ue-panel-bg;
 
-    & h3{
+    & h3 {
         text-align: center;
+        font-family: $font-secondary ;
+    }
+
+    & .-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2em;
+        & p{
+            // width: 100%;
+            padding: 0px 1.5em;
+        }
+
+        & img {
+            width: 50%;
+            border-radius: 1em;
+        }
     }
 }
