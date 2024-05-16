@@ -1,43 +1,43 @@
 export function Projects() {
-    return <section className="projects-page">
-        <h3>Projects</h3>
-        <div class="card-container">
-  <div class="card">
-    <h3>Hover me</h3><br/>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maiores sapiente non asperiores deleniti, quos eos placeat corrupti id consequatur ullam accusantium, nesciunt aut fugiat at ipsam harum eveniet dolore.</p>
-    <div class="layers">
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>   
+  return <section className="projects-page">
+    <div class="card-container">
+      <div class="card">
+        <h3>Development projects</h3><br />
+        <div class="layers">
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+        </div>
+        <img src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1715871750/%D7%A2%D7%99%D7%A6%D7%95%D7%91_%D7%9C%D7%9C%D7%90_%D7%A9%D7%9D_2_qr94a6.png" alt="fdfgdfg" />
+      </div>
     </div>
-  </div> 
-</div>
 
-<div class="card-container">
-  <div class="card">
-    <h3>Hover me</h3><br/>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod maiores sapiente non asperiores deleniti, quos eos placeat corrupti id consequatur ullam accusantium, nesciunt aut fugiat at ipsam harum eveniet dolore.</p>
-    <div class="layers">
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>
-      <div class="layer"></div>   
+    <div class="card-container">
+      <div class="card">
+        <h3>3D projects
+        </h3><br />
+        <div class="layers">
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
+        </div>
+        <img src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1715871203/%D7%A2%D7%99%D7%A6%D7%95%D7%91_%D7%9C%D7%9C%D7%90_%D7%A9%D7%9D_ycykte.png" alt="fdfgdfg" />
+      </div>
     </div>
-  </div> 
-</div>
 
-       </section>
+  </section>
 }
