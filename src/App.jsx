@@ -14,7 +14,7 @@ export function App() {
       <section className='app-layout main-layout'>
         <AppHeader></AppHeader>
         <Routes>
-          <Route element={<HomePage />} path='/' />
+          <Route element={<HomePage/>} path='/' />
         </Routes>
       </section>
     </Router>

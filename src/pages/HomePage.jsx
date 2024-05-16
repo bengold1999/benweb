@@ -1,5 +1,6 @@
 import { AboutMe } from "../cmps/AboutMe";
 import { Projects } from "../cmps/Projects.jsx";
+import { ContactMe } from "../cmps/ContactMe.jsx";
 
 export function HomePage() {
     return <section className="Home-Page">
@@ -18,5 +19,6 @@ export function HomePage() {
         </section>
         <AboutMe></AboutMe>
         <Projects></Projects>
+        <ContactMe></ContactMe>
     </section>
 }

@@ -1,0 +1,47 @@
+// Add this to your SCSS file
+
+.contact-page {
+    width: 100%;
+    background: $ue-panel-bg;
+    form {
+
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 3em;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+
+        .error {
+            color: red;
+            font-size: 0.875em;
+        }
+    }
+}
