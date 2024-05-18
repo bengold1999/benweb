@@ -4,6 +4,9 @@
   max-width: 800px;
   margin: 30px auto;
 
+  .card-container{
+    margin-top: 3em;
+  }
   .title {
     font-size: 2em;
     margin-bottom: 20px;
@@ -25,7 +28,6 @@
 
     .slick-prev,
     .slick-next {
-      background-color: black !important;
       border-radius: 50% !important;
       width: 30px !important;
       height: 30px !important;

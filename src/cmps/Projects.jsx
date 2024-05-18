@@ -64,10 +64,56 @@ export function Projects() {
       link: "https://bengold1999.github.io/meme-generator_ben/"
     },
   ];
+  const projects_3d = [
+    {
+      img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047646/bt6wdnyr7kk9ysrcgyeb.png",
+      title: "ShowReel",
+      description: "",
+      link: "https://www.linkedin.com/posts/ben-goldberger-290b8b23a_show-reel-2023-a-little-late-but-heres-activity-7149734857307234304-yjvH?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047642/g9p0tuwpyuk50qrkvgpg.png",
+      title: "Team Five ",
+      description: " Contributed by building weapons and creating short videos for the game.",
+      link: ""
+    },
+    {
+      img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047645/hvvr3vthel38lh6dshpi.png",
+      title: "Frendo",
+      description: " A short video created using AI, Unreal Engine, Blender, and Substance Painter, demonstrating advanced 3D modeling and animation techniques. ",
+      link: "https://www.youtube.com/watch?v=oHLUbkZRSno&t=160s"
+    },
+
+    {
+      img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047645/iupgfnp4dgizx9rpcwah.png",
+      title: "Reality Reborn",
+      description: " A short video created during the Epic Games Bootcamp",
+      link: "https://www.youtube.com/watch?v=Zjp4YSgLtTY"
+    },
+    // {
+    //   img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047645/iupgfnp4dgizx9rpcwah.png",
+    //   title: "project_cris",
+    //   description: "",
+    //   link: "https://www.youtube.com/watch?v=Zjp4YSgLtTY"
+    // },
+    // {
+    //   img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047645/iupgfnp4dgizx9rpcwah.png",
+    //   title: "env ue",
+    //   description: "",
+    //   link: "https://www.youtube.com/watch?v=Zjp4YSgLtTY"
+    // },
+    // {
+    //   img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047645/iupgfnp4dgizx9rpcwah.png",
+    //   title: "more...",
+    //   description: "",
+    //   link: "https://www.youtube.com/watch?v=Zjp4YSgLtTY"
+    // },
+  ];
 
   return (
     <section className="portfolio">
-      <h3>Development projects </h3>
+      <div className='card-container'>
+        <h3>Development projects </h3>
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div className="card" key={index} onClick={() => window.open(project.link, "_blank")}>
@@ -78,11 +124,14 @@ export function Projects() {
             </div>
           </div>
         ))}
+        
       </Slider>
+      </div>
+      <div className='card-container'>
       <h3>3D projects
       </h3>
       <Slider {...settings}>
-        {projects.map((project, index) => (
+        {projects_3d.map((project, index) => (
           <div className="card" key={index} onClick={() => window.open(project.link, "_blank")}>
             <div className="box">
               <img src={project.img} alt={project.title} />
@@ -92,6 +141,7 @@ export function Projects() {
           </div>
         ))}
       </Slider>
+      </div>
     </section>
   );
 }
