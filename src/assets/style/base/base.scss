@@ -6,8 +6,7 @@
 
 html {
     color: $ue-text-primary;
-    background: $ue-background;
-    background-size: 200% 200%;
+ background-image: radial-gradient(ellipse farthest-corner at center top, lighten(lighten(#2c3e50, 40%),5%) 0%, darken(#2c3e50, 10%) 100%);    background-size: 200% 200%;
     // animation: gradient 15s  infinite;
     font-family: $font-primary;
     font-weight: $font-weight-regular;
