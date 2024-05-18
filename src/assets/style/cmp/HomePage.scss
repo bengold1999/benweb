@@ -1,23 +1,29 @@
-.Home-Page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.Home-Page {
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     // background: $ue-background;
     // width: 100%;
 
 
-    & .title-card-container{
+    & .title-card-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color:$ue-text-primary ;
+        color: $ue-text-primary ;
         width: 100%;
 
-    & .title-card{
-        display: flex;
-        align-items: center;
-        padding: 30vh 0px;
-        
+        & .title-card {
+            display: flex;
+            align-items: center;
+            padding: 30vh 0px;
+
+        }
+
+        .links-pages {
+            display: flex;
+            gap: 0.5rem;
+            font-size: 1.7em;
+        }
     }
-}
 }

@@ -1,7 +1,6 @@
 .appHeader {
     display: flex;
-
-
+    // justify-content: flex-start;
     & .card_logo {
         background-color: $ue-dark-gray;
         font-family: $font-secondary;

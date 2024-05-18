@@ -38,8 +38,9 @@ export function HomePage() {
                         <h3>Ben Goldberger</h3>
                         <p>Full Stack Developer & 3D Generalist</p>
                         <section className="links-pages">
-                            <a href=""><i className="fa-brands fa-linkedin-in"></i></a>
-                            <a href=""><i className="fa-brands fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/ben-goldberger-290b8b23a/"><i className="fa-brands fa-linkedin-in"></i></a>
+                            <a href="https://github.com/bengold1999"><i className="fa-brands fa-github"></i></a>
+                            <a href="https://www.youtube.com/channel/UCb3pD1GOGY6pF4pnKCozyMg"><i className="fa-brands fa-youtube"></i></a>
                         </section>
                     </section>
                     <img src="" alt="img" />
