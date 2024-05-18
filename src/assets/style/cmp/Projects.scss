@@ -1,81 +1,96 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+.portfolio {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 30px auto;
 
-.projects-page {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
-  // justify-content: spa;
-  gap: 2em;
-  
-  .card-container {
-    perspective: 50em;
-    // margin-top: 3em;
-    font-family: $font-secondary;
-    // text-align: center;
+  .title {
+    font-size: 2em;
+    margin-bottom: 20px;
 
-    &:nth-child(1) {
-      // margin-left: 3em;
+    &::after {
+      content: "- What I did ? - ";
+      display: block;
+      font-size: 0.75em;
+      color: #ed3a3a;
+      margin-top: 5px;
+    }
+  }
 
-      // --bi: repeating-linear-gradient(30deg, #111 0 0.25em, #333 0 1em);
+  .slick-slider {
+    position: relative;
+    margin: 0 auto;
+    max-width: 600px;
+    cursor: pointer;
+
+    .slick-prev,
+    .slick-next {
+      background-color: black !important;
+      border-radius: 50% !important;
+      width: 30px !important;
+      height: 30px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      & ::before {
+        color: white !important;
+      }
     }
 
-    &:nth-child(2) {
-      // margin-right: 3em;
-      // --bi: linear-gradient(#555 5em, #0000 3em), linear-gradient(60deg, #880E4F, #1A237E);
+    .slick-prev {
+      left: -40px !important;
     }
 
-    & img {
-      width: 100%;
-      border-radius: 0px 0px 15px 15px;
+    .slick-next {
+      right: -40px !important;
     }
   }
 
   .card {
-    position: relative;
-    width: 100%;
-    padding:1em 0.2em 0em ;
-    color: #fff;
-    transform: rotateY(30deg) rotateX(15deg);
-    transform-style: preserve-3d;
-    transition: transform 1s;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px auto;
+    text-align: left;
+    max-width: 500px;
 
-    &:hover {
-      transform: rotateY(-30deg) rotateX(-15deg);
-      cursor: pointer;
-    }
-  }
+    .box {
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
 
-  .layers {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
-  }
+      .text {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
 
-  .layer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 1em;
-    background-image: var(--bi);
-    transform: translateZ(var(--tz));
-    box-shadow: 0 0 0.5em #000d inset;
-
-    @for $i from 0 to 10 {
-      &:nth-child(#{$i + 1}) {
-        --tz: #{$i * -4}px;
+      p {
+        font-size: 1em;
+        color: #333;
       }
     }
-
-    &:last-child {
-      box-shadow: 0 0 0.5em #000d inset, 0 0 5px #000;
-    }
   }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    max-width: 400px;
+  }
+
+  /* Hide sliders in phone and tablet view */
+  .slick-slider  {
+    display: none;
+  }
+  .portfolio .slick-slider .slick-next {
+    display: none !important;
+  }
+  .portfolio .slick-slider .slick-prev{
+    display: none !important;
+  }
+  
 }

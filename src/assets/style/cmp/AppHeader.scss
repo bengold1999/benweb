@@ -7,7 +7,54 @@
         font-family: $font-secondary;
         font-weight: bold;
         padding: 0px 1em;
-        border-radius: 0px  0px 1em  0.1em ;
+        border-radius: 0px 0px 1em 0.1em;
         margin-left: 1em;
     }
+
+    & h4 {
+        &:hover {
+            height: 100px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .appHeader {
+        z-index: 1;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $ue-panel-bg;
+        padding: 0.5em 0;
+    }
+
+    .appHeader .card_logo {
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .appHeader {
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: $ue-panel-bg;
+        padding: 0.5em 0;
+    }
+
+    .appHeader .card_logo {
+        margin-left: 0;
+        border-radius: 0;
+    }
+
+
 }

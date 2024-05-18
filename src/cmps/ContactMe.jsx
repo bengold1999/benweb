@@ -69,6 +69,7 @@ export function ContactMe() {
 
     return (
         <section className='contact-page'>
+        <h2>Contact With Me!</h2>
         <form onSubmit={handleSubmit}>
             <div>
                 <label>Name:</label>
