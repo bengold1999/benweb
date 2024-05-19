@@ -36,7 +36,7 @@ export function HomePage() {
                 <section className="title-card">
                     <section className="title-left">
                         <h3>Ben Goldberger</h3>
-                        <p>Full Stack Developer & 3D Generalist</p>
+                        <h4>Full Stack Developer & 3D Generalist</h4>
                         <section className="links-pages">
                             <a href="https://www.linkedin.com/in/ben-goldberger-290b8b23a/"><i className="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://github.com/bengold1999"><i className="fa-brands fa-github"></i></a>
