@@ -1,16 +1,20 @@
 .appHeader {
     display: flex;
     // justify-content: flex-start;
-    & .card_logo {
+
+    .card_logo {
         background-color: $ue-dark-gray;
         font-family: $font-secondary;
         font-weight: bold;
         padding: 0px 1em;
         border-radius: 0px 0px 1em 0.1em;
         margin-left: 1em;
+        cursor: pointer; // Add cursor pointer to indicate clickable elements
+
+        &.active {
+            color: $ue-accent; 
+        }
     }
-
-
 }
 
 @media (max-width: 767px) {
@@ -29,12 +33,13 @@
     .appHeader .card_logo {
         background-color: $ue-gray;
         color: $ue-dark-gray;
-
         margin-left: 0;
         border-radius: 0;
+
+        &.active {
+            color: $ue-accent; 
+        }
     }
-
-
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -52,12 +57,12 @@
 
     .appHeader .card_logo {
         background-color: $ue-gray;
-
         color: $ue-dark-gray;
-
         margin-left: 0;
         border-radius: 0;
+
+        &.active {
+            color: $ue-accent; 
+        }
     }
-
-
 }
