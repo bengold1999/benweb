@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export function ContactMe() {
     const [contactInfo, setContactInfo] = useState({
         name: '',
         email: '',
         phone: '',
+        message: '', // Add a message field
     });
 
     const [errors, setErrors] = useState({
         name: '',
         email: '',
         phone: '',
+        message: '', // Add a message field for errors
     });
 
     const handleChange = (e) => {
@@ -35,7 +38,7 @@ export function ContactMe() {
         e.preventDefault();
 
         let formValid = true;
-        let tempErrors = { name: '', email: '', phone: '' };
+        let tempErrors = { name: '', email: '', phone: '', message: '' };
 
         if (!contactInfo.name) {
             formValid = false;
@@ -58,52 +61,78 @@ export function ContactMe() {
             tempErrors.phone = 'Phone number is not valid';
         }
 
+        if (!contactInfo.message) {
+            formValid = false;
+            tempErrors.message = 'Message is required';
+        }
+
         setErrors(tempErrors);
 
         if (formValid) {
-            alert('Form submitted successfully');
-            // Here you can handle the form submission, e.g., send the data to your backend
-            console.log('Submitted contact info:', contactInfo);
+            const templateParams = {
+                from_name: contactInfo.name,
+                to_name: 'Ben', // Replace with the recipient's name
+                message: contactInfo.message,
+                email: contactInfo.email,
+                phone: contactInfo.phone
+            };
+
+            emailjs.send('service_i1jms5i', 'template_nl0d2fg', templateParams, 'bx_8qBf35vFTbeDjo')
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Form submitted successfully and email sent!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email. Please try again.');
+                });
         }
     };
 
     return (
         <section className='contact-page'>
-        <h2>Contact With Me!</h2>
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>Name:</label>
-                <input
-                    type="text"
-                    name="name"
-                    value={contactInfo.name}
-                    onChange={handleChange}
-                />
-                {errors.name && <span className="error">{errors.name}</span>}
-            </div>
-            <div>
-                <label>Email:</label>
-                <input
-                    type="email"
-                    name="email"
-                    value={contactInfo.email}
-                    onChange={handleChange}
-                />
-                {errors.email && <span className="error">{errors.email}</span>}
-            </div>
-            <div>
-                <label>Phone:</label>
-                <input
-                    type="text"
-                    name="phone"
-                    value={contactInfo.phone}
-                    onChange={handleChange}
-                />
-                {errors.phone && <span className="error">{errors.phone}</span>}
-            </div>
-            <button type="submit">Submit</button>
-        </form>
+            <h2>Contact With Me!</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Name:</label>
+                    <input
+                        type="text"
+                        name="name"
+                        value={contactInfo.name}
+                        onChange={handleChange}
+                    />
+                    {errors.name && <span className="error">{errors.name}</span>}
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={contactInfo.email}
+                        onChange={handleChange}
+                    />
+                    {errors.email && <span className="error">{errors.email}</span>}
+                </div>
+                <div>
+                    <label>Phone:</label>
+                    <input
+                        type="text"
+                        name="phone"
+                        value={contactInfo.phone}
+                        onChange={handleChange}
+                    />
+                    {errors.phone && <span className="error">{errors.phone}</span>}
+                </div>
+                <div>
+                    <label>Message:</label>
+                    <textarea
+                        name="message"
+                        value={contactInfo.message}
+                        onChange={handleChange}
+                    />
+                    {errors.message && <span className="error">{errors.message}</span>}
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </section>
     );
 };
-
