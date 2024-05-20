@@ -75,7 +75,7 @@ export function ContactMe() {
         if (formValid) {
             const templateParams = {
                 from_name: contactInfo.name,
-                to_name: 'Ben', // Replace with the recipient's name
+                to_name: 'Ben',
                 message: contactInfo.message,
                 email: contactInfo.email,
                 phone: contactInfo.phone
@@ -84,11 +84,10 @@ export function ContactMe() {
             emailjs.send('service_i1jms5i', 'template_nl0d2fg', templateParams, 'bx_8qBf35vFTbeDjo')
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
-                    setModalMessage('SUCCESS!');
+                    setModalMessage('Your message has been sent successfully!');
                     setmodal(true);
                 }, (error) => {
                     console.log('FAILED...', error);
-                    // alert('Failed to send email. Please try again.');
                     setModalMessage('Failed to send email. Please try again!');
                     setmodal(true);
                 });
