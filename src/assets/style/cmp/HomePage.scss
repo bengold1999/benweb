@@ -12,7 +12,7 @@
         align-items: center;
         color: $ue-text-primary ;
         width: 100%;
-        font-size: $font-size-lg;
+        font-size: $font-size-xl;
 
         & .title-card {
             display: flex;
@@ -25,6 +25,13 @@
             display: flex;
             gap: 0.5rem;
             font-size: 1.7em;
+        }
+    }
+
+    @media (max-width: 1024px){
+        .title-card-container {
+           
+            font-size: $font-size-lg;
         }
     }
 }

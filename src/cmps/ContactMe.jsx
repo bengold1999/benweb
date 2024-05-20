@@ -156,7 +156,7 @@ export function ContactMe() {
                         />
                         {errors.message && <span className="error">{errors.message}</span>}
                     </div>
-                    <button type="submit">Submit</button>
+                    <button className='btn' type="submit">Submit</button>
                 </form>
             </section>
             {modal && <ModalContact closeModal={closeModal} message={modalMessage} />}

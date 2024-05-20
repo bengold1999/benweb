@@ -45,14 +45,16 @@
 
         button {
             padding: 10px 15px;
-            background-color: #007bff;
-            color: #fff;
+            background-color:white;
+            // font-family: $ue-text-primary;
+            font-size: large;
+            color: #000000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
 
             &:hover {
-                background-color: #0056b3;
+                background-color: $ue-blue;
             }
         }
 
