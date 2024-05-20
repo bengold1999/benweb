@@ -8,14 +8,14 @@ export function AboutMe() {
   useEffect(() => {
     const typed = new Typed('.typing-2', {
       strings: [
-        'Fullstack Developer',
+        'Developer',
         '3D Artist',
         'Passionate Coder',
         'Problem Solver',
 
       ],
-      typeSpeed: 100,
-      backSpeed: 60,
+      typeSpeed: 150,
+      backSpeed: 100,
       loop: true
     });
 

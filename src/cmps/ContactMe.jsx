@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import { ModalContact } from './ModalContact';
 
 export function ContactMe() {
     const [contactInfo, setContactInfo] = useState({
         name: '',
         email: '',
         phone: '',
-        message: '', // Add a message field
+        message: '',
     });
+
+    const [modal, setmodal] = useState(false)
+    const [modalMessage, setModalMessage] = useState('');
 
     const [errors, setErrors] = useState({
         name: '',
         email: '',
         phone: '',
-        message: '', // Add a message field for errors
+        message: '',
     });
 
     const handleChange = (e) => {
@@ -80,59 +84,83 @@ export function ContactMe() {
             emailjs.send('service_i1jms5i', 'template_nl0d2fg', templateParams, 'bx_8qBf35vFTbeDjo')
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
-                    alert('Form submitted successfully and email sent!');
+                    setModalMessage('SUCCESS!');
+                    setmodal(true);
                 }, (error) => {
                     console.log('FAILED...', error);
-                    alert('Failed to send email. Please try again.');
+                    // alert('Failed to send email. Please try again.');
+                    setModalMessage('Failed to send email. Please try again!');
+                    setmodal(true);
                 });
         }
     };
 
+    const closeModal = () => {
+        setmodal(false);
+        window.scroll({top:0,behavior:'smooth'})
+        setContactInfo({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+        });
+        setErrors({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+        });
+    };
+
+
     return (
-        <section className='contact-page'>
-            <h2>Contact With Me!</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Name:</label>
-                    <input
-                        type="text"
-                        name="name"
-                        value={contactInfo.name}
-                        onChange={handleChange}
-                    />
-                    {errors.name && <span className="error">{errors.name}</span>}
-                </div>
-                <div>
-                    <label>Email:</label>
-                    <input
-                        type="email"
-                        name="email"
-                        value={contactInfo.email}
-                        onChange={handleChange}
-                    />
-                    {errors.email && <span className="error">{errors.email}</span>}
-                </div>
-                <div>
-                    <label>Phone:</label>
-                    <input
-                        type="text"
-                        name="phone"
-                        value={contactInfo.phone}
-                        onChange={handleChange}
-                    />
-                    {errors.phone && <span className="error">{errors.phone}</span>}
-                </div>
-                <div>
-                    <label>Message:</label>
-                    <textarea
-                        name="message"
-                        value={contactInfo.message}
-                        onChange={handleChange}
-                    />
-                    {errors.message && <span className="error">{errors.message}</span>}
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+        <>
+            <section className='contact-page'>
+                <h2>Contact With Me!</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Name:</label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={contactInfo.name}
+                            onChange={handleChange}
+                        />
+                        {errors.name && <span className="error">{errors.name}</span>}
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={contactInfo.email}
+                            onChange={handleChange}
+                        />
+                        {errors.email && <span className="error">{errors.email}</span>}
+                    </div>
+                    <div>
+                        <label>Phone:</label>
+                        <input
+                            type="text"
+                            name="phone"
+                            value={contactInfo.phone}
+                            onChange={handleChange}
+                        />
+                        {errors.phone && <span className="error">{errors.phone}</span>}
+                    </div>
+                    <div>
+                        <label>Message:</label>
+                        <textarea
+                            name="message"
+                            value={contactInfo.message}
+                            onChange={handleChange}
+                        />
+                        {errors.message && <span className="error">{errors.message}</span>}
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            {modal && <ModalContact closeModal={closeModal} message={modalMessage} />}
+        </>
     );
 };
