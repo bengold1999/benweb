@@ -6,12 +6,22 @@
     font-family: $ue-text-primary;
     // margin-bottom: 1em;
     padding-bottom: 5em;
+    
+    .links-pages{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 3em;
+        color: $ue-text-primary ;
 
-   
+    }
 
     h2{
         text-align: center;
         font-size: $font-size-xxl;
+        margin-bottom:0.5em ;
     }
     form {
         margin-top: 1em;

@@ -96,7 +96,7 @@ export function ContactMe() {
 
     const closeModal = () => {
         setmodal(false);
-        window.scroll({top:0,behavior:'smooth'})
+        window.scroll({ top: 0, behavior: 'smooth' })
         setContactInfo({
             name: '',
             email: '',
@@ -115,9 +115,17 @@ export function ContactMe() {
     return (
         <>
             <section className='contact-page'>
-                <h2>Contact With Me!</h2>
+                <h2>Contact With Me</h2>
+                <section className="links-pages">
+                    <a href="https://www.linkedin.com/in/ben-goldberger-290b8b23a/"><i className="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/bengold1999"><i className="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/channel/UCb3pD1GOGY6pF4pnKCozyMg"><i className="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/972547732441" target="_blank" rel="noopener noreferrer">
+                        <i className="fa-brands fa-whatsapp"></i></a>
+                </section>
                 <form onSubmit={handleSubmit}>
                     <div>
+                        <h3>Send a Mail</h3>
                         <label>Name:</label>
                         <input
                             type="text"
@@ -158,6 +166,7 @@ export function ContactMe() {
                     </div>
                     <button className='btn' type="submit">Submit</button>
                 </form>
+
             </section>
             {modal && <ModalContact closeModal={closeModal} message={modalMessage} />}
         </>
