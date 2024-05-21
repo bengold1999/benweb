@@ -16,12 +16,17 @@
         font-size: 3em;
         color: $ue-text-primary ;
 
+        a:hover{
+            color: $ue-blue;
+        }
     }
 
     h2{
         text-align: center;
         font-size: $font-size-xxl;
         margin-bottom:0.5em ;
+        font-family: 'Audiowide', sans-serif;
+
     }
     form {
         margin-top: 1em;
@@ -56,7 +61,7 @@
         button {
             padding: 10px 15px;
             background-color:white;
-            // font-family: $ue-text-primary;
+            font-family: 'Audiowide', sans-serif;
             font-size: large;
             color: #000000;
             border: none;
@@ -65,12 +70,14 @@
 
             &:hover {
                 background-color: $ue-blue;
+                color: white;
             }
         }
 
         textarea{
             width: 100%;
             height: 5rem;
+            font-family: 'Courier New', Courier, monospace;
         }
         .error {
             color: red;

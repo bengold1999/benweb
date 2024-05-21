@@ -28,7 +28,7 @@ export function AboutMe() {
     <div className="App aboutUs" id="AboutUs">
       <section className="App-main-section AboutUs  ">
         <div className="about-section">
-          <h2 className="title-about-me">About Me</h2>
+          <h2 className="title-about-me ">About Me</h2>
 
           <div className="about-content ">
             <div className="left ">
