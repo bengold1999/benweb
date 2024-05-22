@@ -37,7 +37,7 @@ export function AboutMe() {
             <div className="right">
               <div className="text">I'm Ben and I'm a </div>
               <div className="text"><span className="typing-2"></span></div>
-              <p>Hi, I'm Ben. I am a full stack developer and a 3D generalist, skilled in frameworks like React, Angular, and Vue, and proficient in JavaScript, TypeScript, and CSS/SCSS. In the 3D realm, I work with tools like Blender, Substance Painter, CC4, and iClone8, and have experience with game engines like Unreal Engine and Unity. Passionate about web development and digital art, I strive to blend technical expertise with creative vision. I continuously seek opportunities to innovate and collaborate, bringing extraordinary projects to life in both digital and artistic spheres. Let's connect!.</p>
+              <p>Hi, I'm Ben. I'm a full stack developer and 3D generalist, skilled in React, Angular, Vue, JavaScript, TypeScript, CSS/SCSS, Blender, and Unreal Engine. I blend technical expertise with creative vision in web development and digital art.</p>
 
               <div className="text">Why Work With Me</div>
               <p>I'm a great communicator who takes the time to fully understand and address customer problems. As a skilled and collaborative teammate, I bring both technical expertise and creative vision to every project.</p>

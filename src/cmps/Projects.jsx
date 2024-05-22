@@ -10,6 +10,8 @@ export function Projects() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6300,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />
   };
@@ -114,33 +116,43 @@ export function Projects() {
     <section className="portfolio">
       <div className='card-container'>
         <h3>Development projects </h3>
-      <Slider {...settings}>
-        {projects.map((project, index) => (
-          <div className="card" key={index} onClick={() => window.open(project.link, "_blank")}>
-            <div className="box">
-              <img src={project.img} alt={project.title} />
-              <div className="text">{project.title}</div>
-              <p>{project.description}</p>
+        <Slider {...settings}>
+          {projects.map((project, index) => (
+            <div className="card" key={index} onClick={() => window.open(project.link, "_blank")}>
+              <div className="click-me">
+                <div className="wrap">
+                  <i className="fa fa-hand-pointer" aria-hidden="true"></i>
+                  <div className="click"></div>
+                </div>
+              </div>
+              <div className="box">
+                <img src={project.img} alt={project.title} />
+                <div className="text">{project.title}</div>
+                <p>{project.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-        
-      </Slider>
+          ))}
+        </Slider>
       </div>
       <div className='card-container'>
-      <h3>3D projects
-      </h3>
-      <Slider {...settings}>
-        {projects_3d.map((project, index) => (
-          <div className="card" key={index} onClick={() => window.open(project.link, "_blank")}>
-            <div className="box">
-              <img src={project.img} alt={project.title} />
-              <div className="text">{project.title}</div>
-              <p>{project.description}</p>
+        <h3>3D projects</h3>
+        <Slider {...settings}>
+          {projects_3d.map((project, index) => (
+            <div className="card" key={index} onClick={() => window.open(project.link, "_blank")}>
+              <div className="click-me">
+                <div className="wrap">
+                  <i className="fa fa-hand-pointer" aria-hidden="true"></i>
+                  <div className="click"></div>
+                </div>
+              </div>
+              <div className="box">
+                <img src={project.img} alt={project.title} />
+                <div className="text">{project.title}</div>
+                <p>{project.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
       </div>
     </section>
   );
