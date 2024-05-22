@@ -28,6 +28,11 @@
     }
   }
 
+  .slick-dots{
+    display:none;
+    bottom:0px;
+  }
+
   .slick-slider {
     position: relative;
     margin: 0 auto;
@@ -49,11 +54,11 @@
     }
 
     .slick-prev {
-      left: -40px !important;
+      left: -70px !important;
     }
 
     .slick-next {
-      right: -40px !important;
+      right: -70px !important;
     }
   }
 
