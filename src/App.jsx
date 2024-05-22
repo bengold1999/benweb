@@ -13,7 +13,7 @@ export function App() {
     <Router>
       <section className='app-layout main-layout'>
         <Routes>
-          <Route element={<HomePage/>} path='/' />
+          <Route element={<HomePage/>} path='/benweb/' />
         </Routes>
       </section>
     </Router>
