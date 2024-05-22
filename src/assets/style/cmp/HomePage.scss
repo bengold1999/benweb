@@ -22,6 +22,11 @@
         font-size: $font-size-xl;
         padding: 5vh 0px 30vh;
 
+        h5{
+            font-family: 'Audiowide', sans-serif;
+            font-weight: 100;
+        }
+
         & .title-card {
             // display: flex;
             align-items: center;
