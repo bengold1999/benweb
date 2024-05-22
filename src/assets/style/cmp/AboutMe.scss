@@ -51,21 +51,55 @@
         margin-top: 1em;
         margin-bottom: 1em;
         width: 100%;
+        max-height: 500px;
+        
     }
 
-    .card-flip{
+    .card-flip {
+        position: relative;
         width: 100%;
-    }
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      
+      .is-flipped {
+        position: absolute;
+        bot: 100px;
+        transform: rotateY(180deg);
+      }
+      
+    //   .card {
+    //     // position: absolute;
+    //     // width: 100%;
+    //     backface-visibility: hidden;
+    //   }
+      
+      .card-back {
+        transform: rotateY(180deg);
+        background: #f8f8f8; /* רקע לצורך הדגמה */
+        display: flex;
+        position: absolute;
+        bottom: 15em;
 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        transition: 0.5s;
+
+      }
     .card {
         position: relative;
-        padding: 10px;
+        // padding: 10px;
         // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0);
         margin: 20px auto;
         text-align: left;
         max-width: 600px;
+        backface-visibility: hidden;
+        // transform: rotateY(180deg);
+        transition: 0.5s;
         // display: flex;
 
 
@@ -156,9 +190,9 @@
             h3 {
                 text-align: center;
                 font-family: $font-secondary;
-                font-size: 1.7em;
+                font-size: 1.3em;
                 margin: 0;
-                margin-top: 10px;
+                
             }
 
             .text {
@@ -243,7 +277,7 @@
 }
 
 
-@media (max-width: 853px) {
+@media (max-width: 776px) {
     .aboutUs {
         top: 0;
 
@@ -258,6 +292,59 @@
                 }
             }
         }
+
+        .card-skill{
+            max-height: 500px;
+            
+            
+            .card-back{
+                font-size: 0.8em;
+                bottom: 13em;
+
+            }
+        }
+
+
+        // padding: 2em;
+        background: $ue-panel-bg;
+        // border-radius: 100px 0px 0px 0px;
+        // clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0);
+    }
+}
+
+@media(max-width:500px){
+    .aboutUs {
+        top: 0;
+
+        .about-content {
+            .left {
+                padding-left: 0px;
+            }
+
+            .right {
+                p {
+                    font-size: 0.9em;
+                }
+            }
+        }
+
+        .card-skill{
+            max-height: 500px;
+            
+            
+            .card-back{
+                font-size: 0.85em;
+                bottom: 17em;
+
+                @media (max-width:350px) {
+                    bottom: 20em;
+                    font-size: 0.8em;
+
+                }
+
+            }
+        }
+
 
         // padding: 2em;
         background: $ue-panel-bg;

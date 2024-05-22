@@ -1,12 +1,22 @@
 
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Typed from 'typed.js';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export function AboutMe() {
+
+
+  const [isFlipped, setIsFlipped] = useState(false);
+  
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
+
+
   const settings = {
     dots: false,
     infinite: true,
@@ -102,57 +112,70 @@ export function AboutMe() {
     };
   }, []);
 
+  
   return (
     <div className="App aboutUs" id="AboutUs">
-      <section className="App-main-section AboutUs  ">
+      <section className="App-main-section AboutUs">
         <div className="about-section">
-          <h2 className="title-about-me ">About Me</h2>
-
-          <div className="about-content ">
-            <div className="left ">
-            </div>
+          <h2 className="title-about-me">About Me</h2>
+          <div className="about-content">
+            <div className="left"></div>
             <div className="right">
               <img className="Ben-img" src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1715859261/WhatsApp_Image_2023-01-06_at_19.51.54_t38zxp.png" alt="Profile Image 626x626" />
-              <div className="text">I'm Ben and I'm a </div>
+              <div className="text">I'm Ben and I'm a</div>
               <div className="text"><span className="typing-2"></span></div>
               <div className="cool-img">
-                <section className="card-skill">
-                <h3> FullStack Developer skills</h3>
-                <Slider {...settings}>
-                  {imgs.map((project, index) => (
-                    <div className="card" key={index}>
-                      <div className="box">
-                        <img src={project.img} alt={project.title} />
-                        <div className="text">{project.title}</div>
-                      </div>
+                <section className="card-skill" onClick={handleFlip}>
+                  <h3> FullStack Developer skills</h3>
+                  <div className={`card ${isFlipped ? 'card-flip is-flipped' : ''}`}>
+                    <div className="card card-front">
+                      <Slider {...settings}>
+                        {imgs.map((project, index) => (
+                          <div className="card" key={index}>
+                            <div className="box">
+                              <img src={project.img} alt={project.title} />
+                              <div className="text">{project.title}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </Slider>
                     </div>
-                  ))}
-                </Slider>
+                    <div className="card card-back">
+                      <p>My full stack development skills include proficiency in React, Angular, Vue, JavaScript, TypeScript, Node.js, Express, MongoDB, CSS, and SCSS for building dynamic, robust, and responsive web applications.</p>
+                    </div>
+                  </div>
                 </section>
-                <section className="card-skill">
-                <h3> 3D Generalist skills</h3>
-                <Slider {...settings}>
-                  {imgs_3d.map((project, index) => (
-                    <div className="card" key={index}>
-                      <div className="box">
-                        <img src={project.img} alt={project.title} />
-                        <div className="text">{project.title}</div>
-                      </div>
+                <section className="card-skill" onClick={handleFlip}>
+                  <h3> 3D Art skills</h3>
+                  <div className={`card ${isFlipped ? 'card-flip is-flipped' : ''}`}>
+                    <div className="card card-front">
+                      <Slider {...settings}>
+                        {imgs_3d.map((project, index) => (
+                          <div className="card" key={index}>
+                            <div className="box">
+                              <img src={project.img} alt={project.title} />
+                              <div className="text">{project.title}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </Slider>
                     </div>
-                  ))}
-                </Slider>
+                    <div className="card card-back">
+                      <p>3D Generalist skills include using tools such as Blender, Substance Painter, Unity, and Unreal Engine to create captivating visual stories.</p>
+                    </div>
+                  </div>
                 </section>
               </div>
               <div className="text">Why Work With Me</div>
               <p>I excel in communication, bringing both technical expertise and creative vision to every project as a skilled and collaborative teammate.</p>
-              <a href="https://drive.google.com/file/d/1Q96uR4HSDWYDioYqlCFvcOUVCUU31Vnt/view?usp=sharing" target="blank">Download CV</a>
+              <a href="https://drive.google.com/file/d/1Q96uR4HSDWYDioYqlCFvcOUVCUU31Vnt/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
+
 }
 
 
