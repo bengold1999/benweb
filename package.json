@@ -1,5 +1,5 @@
 {
-  "name": "benweb",
+  "name": "BenWeb",
   "private": true,
   "version": "0.0.0",
   "homepage": "https://bengold1999.github.io/BenWeb/",
@@ -8,6 +8,7 @@
     "dev": "vite",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "clean": "rm -rf dist",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
