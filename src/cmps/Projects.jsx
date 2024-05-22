@@ -77,7 +77,7 @@ export function Projects() {
       img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047642/g9p0tuwpyuk50qrkvgpg.png",
       title: "Team Five ",
       description: " Contributed by building weapons and creating short videos for the game.",
-      link: ""
+      link: "https://www.youtube.com/watch?v=v30KdSOXkps"
     },
     {
       img: "https://res.cloudinary.com/dheh8zkmv/image/upload/v1716047645/hvvr3vthel38lh6dshpi.png",
