@@ -161,7 +161,7 @@ export function AboutMe() {
                       </Slider>
                     </div>
                     <div className="card card-back">
-                      <p>3D Generalist skills include using tools such as Blender, Substance Painter, Unity, and Unreal Engine to create captivating visual stories.</p>
+                      <p>My 3D Art skills include using tools such as Blender, Substance Painter, Unity, and Unreal Engine to create captivating and immersive visuals for games.</p>
                     </div>
                   </div>
                 </section>
