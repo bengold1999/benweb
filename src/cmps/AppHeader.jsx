@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export function AppHeader({ scrollToComponent }) {
-    const [activeSection, setActiveSection] = useState('');
-
+export function AppHeader({ scrollToComponent, activeSection }) {
     const handleClick = (section) => {
-        setActiveSection(section);
         scrollToComponent(section);
     };
 
     return (
-        <section className="appHeader">
+        <section className={`appHeader ${activeSection === 'about' ? 'about-active' : ''}`}>
             <div 
                 className={`card_logo ${activeSection === 'home' ? 'active' : ''}`} 
                 onClick={() => handleClick('home')}

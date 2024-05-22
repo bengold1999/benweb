@@ -2,13 +2,42 @@ import { AboutMe } from "../cmps/AboutMe";
 import { Projects } from "../cmps/Projects.jsx";
 import { ContactMe } from "../cmps/ContactMe.jsx";
 import { AppHeader } from '../cmps/AppHeader.jsx';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function HomePage() {
     const homeRef = useRef(null);
     const aboutRef = useRef(null);
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
+    const [activeSection, setActiveSection] = useState('');
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        if (aboutRef.current) observer.observe(aboutRef.current);
+        if (projectsRef.current) observer.observe(projectsRef.current);
+        if (contactRef.current) observer.observe(contactRef.current);
+
+        return () => {
+            if (aboutRef.current) observer.unobserve(aboutRef.current);
+            if (projectsRef.current) observer.unobserve(projectsRef.current);
+            if (contactRef.current) observer.unobserve(contactRef.current);
+        };
+    }, []);
 
     const scrollToComponent = (component) => {
         switch (component) {
@@ -30,11 +59,11 @@ export function HomePage() {
     };
 
     return (
-        <section className="Home-Page" ref={homeRef}>
-            <AppHeader scrollToComponent={scrollToComponent} />
-            <section className="title-card-container">
+        <section className="Home-Page" >
+            <AppHeader scrollToComponent={scrollToComponent} activeSection={activeSection} />
+            <section className="title-card-container" ref={homeRef}>
                 <section className="title-card">
-                        <h2 className="title-new">Ben Goldberger</h2>
+                    <h2 className="title-new">Ben Goldberger</h2>
                     <section className="title-left">
                         <h5>Full Stack Developer & 3D Generalist</h5>
                         <section className="links-pages">
@@ -44,7 +73,7 @@ export function HomePage() {
                         </section>
                     </section>
                 </section>
-              <img src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1716300062/pxmoffs5yooxgcrawai2.png" alt="" />
+                <img src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1716300062/pxmoffs5yooxgcrawai2.png" alt="" />
             </section>
             <div ref={aboutRef}>
                 <AboutMe />
