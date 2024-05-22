@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './assets/style/main.scss'
 
 import { HomePage } from './pages/HomePage.jsx'
@@ -10,13 +10,11 @@ import { AppHeader } from './cmps/AppHeader.jsx'
 export function App() {
 
   return (
-    <Router>
       <section className='app-layout main-layout'>
         <Routes>
-          <Route element={<HomePage/>} path='/benweb/' />
+          <Route element={<HomePage/>} path='/' />
         </Routes>
       </section>
-    </Router>
   )
 }
 
