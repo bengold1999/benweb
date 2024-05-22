@@ -116,6 +116,7 @@ export function AboutMe() {
               <div className="text">I'm Ben and I'm a </div>
               <div className="text"><span className="typing-2"></span></div>
               <div className="cool-img">
+                <section className="card-skill">
                 <h3> FullStack Developer skills</h3>
                 <Slider {...settings}>
                   {imgs.map((project, index) => (
@@ -127,6 +128,8 @@ export function AboutMe() {
                     </div>
                   ))}
                 </Slider>
+                </section>
+                <section className="card-skill">
                 <h3> 3D Generalist skills</h3>
                 <Slider {...settings}>
                   {imgs_3d.map((project, index) => (
@@ -138,6 +141,7 @@ export function AboutMe() {
                     </div>
                   ))}
                 </Slider>
+                </section>
               </div>
               <div className="text">Why Work With Me</div>
               <p>I excel in communication, bringing both technical expertise and creative vision to every project as a skilled and collaborative teammate.</p>
