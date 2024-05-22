@@ -115,7 +115,7 @@ export function ContactMe() {
     return (
         <>
             <section className='contact-page'>
-                <h2>Contact With Me</h2>
+                <h2>Contact Me</h2>
                 <section className="links-pages">
                     <a href="https://www.linkedin.com/in/ben-goldberger-290b8b23a/"><i className="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://github.com/bengold1999"><i className="fa-brands fa-github"></i></a>
