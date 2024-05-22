@@ -54,8 +54,11 @@
             @media (max-width: 1300px) {
                 max-width: 30%;
             }
-            @media (max-width: 950px) {
-                max-width: 20%;
+            @media (max-width: 1050px) {
+                max-width: 10%;
+            }
+            @media (max-width: 800px) {
+                max-width: 100px;
             }
           
         }
@@ -72,7 +75,7 @@
 
 
     }
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
         .title-card-container {
             text-align: center;
             justify-content: center;
