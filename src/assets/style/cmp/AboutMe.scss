@@ -12,6 +12,7 @@
           font-family: 'Audiowide', sans-serif;
           font-weight:$font-weight-bold;
         text-align: center;
+        padding-top: 0.85em;
         margin: 0;
         margin-bottom: 1em;
     }
@@ -92,6 +93,7 @@
                 color: #333;
                 font-size: 20px;
                 font-weight: 800;
+                font-family: 'Audiowide', sans-serif;
                 padding: 10px 30px;
                 margin-top: 20px;
                 border-radius: 6px;
@@ -126,9 +128,8 @@
             display: flex;
             width: 100%;
             align-items: center;
-            text-align: center;
 
-            & p {}
+           
         }
 
         & .text {
@@ -144,6 +145,11 @@
         .about-content{
         .left {
           padding-left: 0px;
+        }
+        .right{
+            p{
+                font-size: 0.9em;
+            }
         }
     }
         // padding: 2em;
