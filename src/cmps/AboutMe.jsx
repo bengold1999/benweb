@@ -128,7 +128,7 @@ export function AboutMe() {
                 <section className="card-skill" onClick={handleFlip}>
                   <h3> FullStack Developer skills</h3>
                   <div className={`card ${isFlipped ? 'card-flip is-flipped' : ''}`}>
-                    <div className="card card-front">
+                    <div className={`card card-front ${isFlipped ? 'dis' : ''}`}>
                       <Slider {...settings}>
                         {imgs.map((project, index) => (
                           <div className="card" key={index}>
@@ -141,7 +141,7 @@ export function AboutMe() {
                       </Slider>
                     </div>
                     <div className="card card-back">
-                      <p>My full stack development skills include proficiency in React, Angular, Vue, JavaScript, TypeScript, Node.js, Express, MongoDB, CSS, and SCSS for building dynamic, robust, and responsive web applications.</p>
+                      <p className={`${isFlipped ? '':'dis'}`}>My full stack development skills include proficiency in React, Angular, Vue, JavaScript, TypeScript, Node.js, Express, MongoDB, CSS, and SCSS for building dynamic, robust, and responsive web applications.</p>
                     </div>
                   </div>
                 </section>
@@ -161,7 +161,7 @@ export function AboutMe() {
                       </Slider>
                     </div>
                     <div className="card card-back">
-                      <p>My 3D Art skills include using tools such as Blender, Substance Painter, Unity, and Unreal Engine to create captivating and immersive visuals for games.</p>
+                      <p className={`${isFlipped ? '':'dis'}`}>My 3D Art skills include using tools such as Blender, Substance Painter, Unity, and Unreal Engine to create captivating and immersive visuals for games.</p>
                     </div>
                   </div>
                 </section>
