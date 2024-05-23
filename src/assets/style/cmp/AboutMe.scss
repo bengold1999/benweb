@@ -99,7 +99,7 @@
         margin: 20px auto;
         text-align: left;
         max-width: 600px;
-        backface-visibility: hidden;
+        backface-visibility: visible;
         // transform: rotateY(180deg);
         transition: 0.5s;
         // display: flex;
