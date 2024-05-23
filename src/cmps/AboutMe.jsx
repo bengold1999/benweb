@@ -152,7 +152,7 @@ export function AboutMe() {
                       <Slider {...settings}>
                         {imgs_3d.map((project, index) => (
                           <div className="card" key={index}>
-                            <div className="box">
+                            <div className={`box ${isFlipped ? 'dis' : ''}`}>
                               <img src={project.img} alt={project.title} />
                               <div className="text">{project.title}</div>
                             </div>

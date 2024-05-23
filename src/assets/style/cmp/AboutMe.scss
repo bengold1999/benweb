@@ -60,12 +60,14 @@
         width: 100%;
         transform-style: preserve-3d;
         transition: transform 0.6s;
+        
       }
       
       .is-flipped {
         position: absolute;
-        bot: 100px;
+        // bottom: 100px;
         transform: rotateY(180deg);
+        // display: none;
       }
       
     //   .card {
@@ -124,6 +126,9 @@
                 font-size: 1em;
                 color: #333;
             }
+        }
+        .dis{
+            opacity: 0;
         }
     }
 
