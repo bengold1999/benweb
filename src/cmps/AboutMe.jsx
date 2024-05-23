@@ -148,11 +148,11 @@ export function AboutMe() {
                 <section className="card-skill" onClick={handleFlip}>
                   <h3> 3D Art skills</h3>
                   <div className={`card ${isFlipped ? 'card-flip is-flipped' : ''}`}>
-                    <div className="card card-front">
+                    <div className={`card card-front ${isFlipped ? 'dis' : ''}`}>
                       <Slider {...settings}>
                         {imgs_3d.map((project, index) => (
                           <div className="card" key={index}>
-                            <div className={`box ${isFlipped ? 'dis' : ''}`}>
+                            <div className={`box`}>
                               <img src={project.img} alt={project.title} />
                               <div className="text">{project.title}</div>
                             </div>

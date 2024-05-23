@@ -78,7 +78,7 @@
       
       .card-back {
         transform: rotateY(180deg);
-        background: #f8f8f8; /* רקע לצורך הדגמה */
+        background: #f8f8f8; 
         display: flex;
         position: absolute;
         bottom: 15em;
@@ -342,7 +342,7 @@
                 bottom: 17em;
 
                 @media (max-width:350px) {
-                    bottom: 20em;
+                    bottom: 19em;
                     font-size: 0.8em;
 
                 }
