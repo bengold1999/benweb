@@ -15,7 +15,7 @@ export function HomePage() {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5
+            threshold: 0.3
         };
 
         const observerCallback = (entries) => {
@@ -63,7 +63,7 @@ export function HomePage() {
     return (
         <section className="Home-Page">
             <AppHeader scrollToComponent={scrollToComponent} activeSection={activeSection} />
-            <section className="title-card-container" id="home" ref={homeRef}>
+            <section className={`title-card-container fade-in-visible`} id="home" ref={homeRef}>
                 <section className="title-card">
                     <h2 className="title-new">Ben Goldberger</h2>
                     <section className="title-left">
@@ -77,13 +77,13 @@ export function HomePage() {
                 </section>
                 <img src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1716300062/pxmoffs5yooxgcrawai2.png" alt="" />
             </section>
-            <div ref={aboutRef} id="about">
+            <div ref={aboutRef} id="about" className={` ${activeSection === 'about' ? 'fade-in-visible' : 'fade-in'}`}>
                 <AboutMe />
             </div>
-            <div ref={projectsRef} id="projects">
+            <div ref={projectsRef} id="projects" className={` ${activeSection === 'projects' ? 'fade-in-visible' : 'fade-in'}`}>
                 <Projects />
             </div>
-            <div ref={contactRef} id="contact" style={{ width: '100%' }}>
+            <div ref={contactRef} id="contact" className={` ${activeSection === 'contact' ? 'fade-in-visible' : 'fade-in'}`} style={{ width: '100%' }}>
                 <ContactMe />
             </div>
         </section>
