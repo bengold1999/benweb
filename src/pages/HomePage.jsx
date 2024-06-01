@@ -28,11 +28,13 @@ export function HomePage() {
 
         const observer = new IntersectionObserver(observerCallback, observerOptions);
 
+        if (homeRef.current) observer.observe(homeRef.current);
         if (aboutRef.current) observer.observe(aboutRef.current);
         if (projectsRef.current) observer.observe(projectsRef.current);
         if (contactRef.current) observer.observe(contactRef.current);
 
         return () => {
+            if (homeRef.current) observer.unobserve(homeRef.current);
             if (aboutRef.current) observer.unobserve(aboutRef.current);
             if (projectsRef.current) observer.unobserve(projectsRef.current);
             if (contactRef.current) observer.unobserve(contactRef.current);
@@ -59,9 +61,9 @@ export function HomePage() {
     };
 
     return (
-        <section className="Home-Page" >
+        <section className="Home-Page">
             <AppHeader scrollToComponent={scrollToComponent} activeSection={activeSection} />
-            <section className="title-card-container" ref={homeRef}>
+            <section className="title-card-container" id="home" ref={homeRef}>
                 <section className="title-card">
                     <h2 className="title-new">Ben Goldberger</h2>
                     <section className="title-left">
@@ -75,13 +77,13 @@ export function HomePage() {
                 </section>
                 <img src="https://res.cloudinary.com/dheh8zkmv/image/upload/v1716300062/pxmoffs5yooxgcrawai2.png" alt="" />
             </section>
-            <div ref={aboutRef}>
+            <div ref={aboutRef} id="about">
                 <AboutMe />
             </div>
-            <div ref={projectsRef}>
+            <div ref={projectsRef} id="projects">
                 <Projects />
             </div>
-            <div style={{ width: '100%' }} ref={contactRef}>
+            <div ref={contactRef} id="contact" style={{ width: '100%' }}>
                 <ContactMe />
             </div>
         </section>

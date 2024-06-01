@@ -6,7 +6,7 @@ export function AppHeader({ scrollToComponent, activeSection }) {
     };
 
     return (
-        <section className={`appHeader ${activeSection === 'about' ? 'about-active' : ''}`}>
+        <section className="appHeader">
             <div 
                 className={`card_logo ${activeSection === 'home' ? 'active' : ''}`} 
                 onClick={() => handleClick('home')}
