@@ -72,6 +72,7 @@ export function HomePage() {
                             <a href="https://www.linkedin.com/in/ben-goldberger-290b8b23a/"><i className="fa-brands fa-linkedin-in"></i></a>
                             <a href="https://github.com/bengold1999"><i className="fa-brands fa-github"></i></a>
                             <a href="https://www.youtube.com/channel/UCb3pD1GOGY6pF4pnKCozyMg"><i className="fa-brands fa-youtube"></i></a>
+                            <a href="https://cara.app/bengold1999"><i className="fa-brands fa-artstation"></i></a>
                         </section>
                     </section>
                 </section>
